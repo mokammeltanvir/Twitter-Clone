@@ -19,7 +19,6 @@ let tweet = ref('')
 let file = ref('')
 let showUpload = ref('')
 let uploadType = ref('')
-
 let randImg1 = ref(`https://picsum.photos/id/${(Math.random() * 200).toFixed(0)}/100`)
 let randImg2 = ref(`https://picsum.photos/id/${(Math.random() * 200).toFixed(0)}/100`)
 
@@ -62,15 +61,14 @@ const textareaInput = (e) => {
 </script>
 
 <template>
-
     <!-- Main layout -->
     <div class="fixed w-full">
         <div class="max-w-[1400px] flex mx-auto">
             <div class="lg:w-3/12 w-[60px] h-[100vh] max-w-[350px] lg:px-4 lg:mx-auto">
-
                 <div class="p-2 px-3 mb-4">
                     <Twitter fillColor="#FFFFFF" :size="37" />
                 </div>
+
                 <MenuItem iconString="Home"/>
                 <MenuItem iconString="Explore"/>
                 <MenuItem iconString="Notifications"/>
@@ -85,6 +83,7 @@ const textareaInput = (e) => {
                     <span class="block lg:hidden"><Feather /></span>
                 </button>
             </div>
+
             <div class="lg:w-7/12 w-11/12 border-x border-gray-800 relative">
                 <div class=" bg-black bg-opacity-50 backdrop-blur-md z-10 absolute w-full">
                     <div class="border-gray-800 border-b w-full">
@@ -135,13 +134,13 @@ const textareaInput = (e) => {
                 </div>
 
                 <div class="w-full mt-4 rounded-lg lg:block hidden bg-[#212327]">
-                    <div class="w-full p-4 text-white font-extrabold mb-6 text-[20px]">Trends for you</div>
+                    <div class="w-full p-4 text-white font-extrabold mb-6 text-[20px]">What's happening</div>
 
                     <div class="h-[80px] hover:bg-gray-800 cursor-pointer transition duration-200 ease-in-out">
                         <div class="flex p-3 justify-between h-[80px] py-3">
                             <div>
-                            <div class="text-[14px] text-gray-400">Trending in Bangladesh</div>
-                                <div class="w-full text-white font-extrabold text-[17px]">Bangladesh</div>                                
+                                <div class="text-[14px] text-gray-400">Tennis Tournament LIVE</div>
+                                <div class="w-full text-white font-extrabold mb-6 text-[17px]">Australian Open 2023</div>
                             </div>
                             <img class="rounded-xl"  :src="randImg2" alt="" />
                         </div>
@@ -150,8 +149,8 @@ const textareaInput = (e) => {
                     <div class="hover:bg-gray-800 cursor-pointer transition duration-200 ease-in-out">
                         <div class="flex p-3 justify-between">
                             <div>
-                                <div class="text-[14px] text-gray-400">Technology · Trending</div>
-                                <div class="w-full text-white font-extrabold mb-6 text-[17px]">TypeScript</div>
+                                <div class="text-[14px] text-gray-400">Trending in United Kingdom</div>
+                                <div class="w-full text-white font-extrabold text-[17px]">Doomsday Clock</div>
                                 <div class="text-[14px] text-gray-400">5,923 Tweets</div>
                             </div>
                             <DotsHorizontal fillColor="#5e5c5c"/>
@@ -162,7 +161,7 @@ const textareaInput = (e) => {
                         <div class="flex p-3 justify-between">
                             <div>
                                 <div class="text-[14px] text-gray-400">Sports · Trending</div>
-                                <div class="w-full text-white font-extrabold text-[17px]">Cricket</div>
+                                <div class="w-full text-white font-extrabold text-[17px]">Poro</div>
                                 <div class="text-[14px] text-gray-400">12,432 Tweets</div>
                             </div>
                             <DotsHorizontal fillColor="#5e5c5c"/>
@@ -173,7 +172,7 @@ const textareaInput = (e) => {
                         <div class="flex p-3 justify-between">
                             <div>
                                 <div class="text-[14px] text-gray-400">Politics · Trending</div>
-                                <div class="w-full text-white font-extrabold text-[17px]">Dhaka Bangladesh News</div>
+                                <div class="w-full text-white font-extrabold text-[17px]">Sunak</div>
                                 <div class="text-[14px] text-gray-400">98,745 Tweets</div>
                             </div>
                             <DotsHorizontal fillColor="#5e5c5c"/>
@@ -190,7 +189,8 @@ const textareaInput = (e) => {
         </div>
     </div>
     <!-- /Main layout -->
-    <!-- Tweet section -->
+
+<!-- Tweet -->
     <div id="OverlaySection" v-if="createTweet" class="fixed top-0 left-0 w-full h-screen bg-black md:bg-gray-400 md:bg-opacity-30 md:p-3">
         <div class="md:max-w-2xl md:mx-auto md:mt-10 md:rounded-xl bg-black">
 
@@ -277,6 +277,5 @@ const textareaInput = (e) => {
             </div>
         </div>
     </div>
-    <!-- /Tweet section -->
+    <!-- /Tweet -->
 </template>
-
