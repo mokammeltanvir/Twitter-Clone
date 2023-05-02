@@ -56,3 +56,8 @@ Start the Server
 ```bash
 php artisan serve
 ```
+
+## Application Screenshots
+
+![App Screenshot](https://raw.githubusercontent.com/mokammeltanvir/Twitter-Clone/main/twitter-clone.png)
+
